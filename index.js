@@ -1,4 +1,4 @@
-const contactServ = require("./contacts");
+const contactServ = require("./ contacts");
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
@@ -7,7 +7,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       return console.log(allContacts);
 
     case "get":
-      const foundedBook = await contactServ.getIdContact(id);
+      const foundedBook = await contactServ.getIdCont(id);
       return console.log(foundedBook);
 
     case "add":
@@ -23,4 +23,6 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   }
 };
 
-invokeAction({ action: "list" });
+// invokeAction({ action: "list" });
+
+invokeAction({ action: "get", id: "qdggE76Jtbfd9eWJHrssH" });
